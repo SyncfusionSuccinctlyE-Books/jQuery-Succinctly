@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <!-- Move mouse over div to get position relative to the div -->
+    <div style="margin: 200px; height: 100px; width: 100px; background: #ccc; padding: 20px">
+        relative to this </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>  (function($){  $('div').mousemove(function(e){     
+      //relative to this div element instead of document     
+      var relativeX = e.pageX - this.offsetLeft;
+      var relativeY = e.pageY - this.offsetTop;
+      $(this).html('releativeX = ' + relativeX + ', releativeY = ' + relativeY);
+  });
+  })(jQuery); </script>
+</body>
+</html>

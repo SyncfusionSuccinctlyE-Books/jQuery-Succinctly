@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>  jQuery(function($){ // Pass jQuery a function   
+      // Pass jQuery a string of HTML 
+      $('<p></p>').appendTo('body');  
+      // Pass jQuery an element reference 
+      $(document.createElement('a')).text('jQuery').appendTo('p');  
+      // Pass jQuery a CSS expression 
+      $('a:first').attr('href', 'http://www.jquery.com');
+      // Pass jQuery DOM reference 
+      $(document.anchors[0]).attr('jQuery');
+  }); </script>
+</body>
+</html>

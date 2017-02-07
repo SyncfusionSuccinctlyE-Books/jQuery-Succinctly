@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ul>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script> (function ($) {
+     // Remember that text() combines the contents of all 
+     // elements in the wrapper set into a single string.  
+     // By index 
+     alert($('li:nth-child(1)').text()); // Alerts "1"  
+     // By even 
+     alert($('li:nth-child(even)').text()); // Alerts "246810"  
+     // By odd 
+     alert($('li:nth-child(odd)').text()); // Alerts "13579"  
+     // By equation 
+     alert($('li:nth-child(3n)').text()); // Alerts "369"  
+     // Remember this filter uses a 1 index 
+     alert($('li:nth-child(0)').text()); // Alerts nothing. There is no 0 index.  
+ })(jQuery); </script>
+</body>
+</html>

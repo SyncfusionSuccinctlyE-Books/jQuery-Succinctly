@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>  (function ($) {
+$(document).mousemove(function (e) {
+      // e.pageX - gives you X position     
+      // e.pageY - gives you Y position     
+      $('body').html('e.pageX = ' + e.pageX + ', e.pageY = ' + e.pageY);
+  });
+  })(jQuery); </script>
+</body>
+</html>

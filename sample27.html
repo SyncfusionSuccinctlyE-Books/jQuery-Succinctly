@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <ul>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ul>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script> (function ($) {
+     // Remember that text() combines the contents of all 
+     // elements in the wrapper set into a single string. 
+     alert('there are ' + $('li').length + ' elements in the set');
+     // Get me the first element in the set 
+     alert($('li:first').text()); // Alerts "1"  
+     // Get me the last element in the set 
+     alert($('li:last').text()); // Alerts "10"  
+     // Get me the 6th element in the set, 0 based index 
+     alert($('li:eq(5)').text()); // Alerts "6"  
+ })(jQuery); </script>
+</body>
+</html>

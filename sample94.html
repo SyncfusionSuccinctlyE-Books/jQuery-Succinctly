@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <div style="height: 100px; width: 100px; background-color: red; position: absolute;
+        left: 20px;">
+        Hover over Me!
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>  (function ($) {
+      $('div').hover(function ()
+      { $(this).stop().animate({ left: 75 }, 'fast'); },
+        function () { $(this).stop().animate({ left: 20 }, 'fast'); });
+  })(jQuery); </script>
+</body>
+</html>

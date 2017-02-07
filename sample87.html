@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <div id="counter1"></div>
+    <div id="counter2"></div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>   (function ($) {
+$.fn.count = function () {
+       return this.each(function () {
+           var $this = $(this);             // Sets the counter start number to zero             
+           $this.text($.fn.count.defaultOptions.startCount + '');
+           var myInterval = window.setInterval(function () { var currentCount = parseFloat($this.text()); var newCount = currentCount + 1; $this.text(newCount + ''); }, 1000);
+       });
+   }; $.fn.count.defaultOptions = { startCount: 100 };
+   })(jQuery); jQuery('#counter1, #counter2').count();    </script>
+</body>
+</html>

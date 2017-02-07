@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <input name="button" type="button" id="button1" />
+    <input name="button" type="button" id="button2" disabled="disabled" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>  (function ($) {
+      // Is it enabled? 
+      alert($('#button1').is(':enabled')); // Alerts true  
+      // Or, using a filter 
+      alert($('#button1:enabled').length); // Alerts "1"  
+      // Is it disabled? 
+      alert($('#button2').is(':disabled')); // Alerts "true"  
+      // Or, using a filter  
+      alert($('#button2:disabled').length); // Alerts "1"  
+  })(jQuery); </script>
+</body>
+</html>

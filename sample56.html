@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <input type="radio" value="radio1">
+    <input type="radio" value="radio2">
+    <input type="checkbox" value="checkbox1">
+    <input type="checkbox" value="checkbox2">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>  (function($){  
+      // Check all radio and checkbox inputs on the page. 
+      $('input:radio,input:checkbox').val(['radio1', 'radio2', 'checkbox1', 'checkbox2']);  
+      // Use explict iteration to uncheck. 
+      // $('input:radio,input:checkbox').removeAttr('checked');  
+      // or 
+      // $('input:radio,input:checkbox').attr('checked', ''); 
+  })(jQuery); </script>
+</body>
+</html>

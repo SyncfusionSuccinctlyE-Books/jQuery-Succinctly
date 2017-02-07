@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <button>Add another Button</button>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>  (function ($) {
+      $('button').live('click', function ()
+      { $(this).after("<button>Add another Button</button>"); });
+  })(jQuery); </script>
+</body>
+</html>

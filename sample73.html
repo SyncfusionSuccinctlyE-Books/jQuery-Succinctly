@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <a href="http://www.jquery.com">jQuery</a>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>  (function ($) {
+      // Stops browser from navigating 
+      $('a').click(function (event) { event.preventDefault(); });
+  })(jQuery); </script>
+</body>
+</html>

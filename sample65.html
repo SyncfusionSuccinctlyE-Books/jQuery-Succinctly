@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <input type="text" value="click me" />
+    <br />
+    <br />
+    <button>remove events</button>
+    <div id="log" name="log"></div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>  (function ($) {
+      // Bind events 
+      $('input').bind('click', function () { alert('You clicked me!'); });
+      $('input').bind('focus', function () {
+          // alert and focus events are a recipe for an endless list of dialogs
+          // we will log instead
+          $('#log').html('You focused this input!');
+      });
+      // Unbind events 
+      $('button').click(function () {
+          // Using shortcut binding via click()     
+          $('input').unbind('click');
+          $('input').unbind('focus');
+          // Or, unbind all events     // $('button').unbind(); 
+      });
+  })(jQuery); </script>
+</body>
+</html>

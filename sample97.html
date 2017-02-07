@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <div style="height: 100px; width: 100px; background-color: red; position: absolute;
+        left: 20px; border: 1px solid #ff9933">
+        Animate me!
+    </div>
+    <div style="height: 100px; width: 100px; background-color: red; position: absolute;
+        left: 20px; top: 100px; border: 1px solid #ff9933">
+        Animate me!
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script> (function ($) {
+     // Each effect is added to a queue and occurs sequentially     
+     $('div:first').slideUp('slow').slideDown('slow').hide('slow');
+     // Each method is added to a queue and occurs sequentially     
+     $('div:last').animate({ width: '200px' }, 1000).animate({ borderLeftWidth: '10px' }, 1000);
+ })(jQuery); </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <div id="i0">jQuery</div>
+    <div id="i1">jQuery</div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>  (function($){     
+      // Returns true     
+      alert($('div').is('#i1'));      
+      // Returns false. Wrapper set contains no <div> with id="i2"     
+      alert($('div').is('#i2'));      
+      // Returns false. Wrapper set contains no hidden <div>     
+      alert($('div').is(':hidden'));
+  })(jQuery); </script>
+</body>
+</html>

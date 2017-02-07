@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <div>jQuery</div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>  (function ($) {
+$('div').bind('myCustomEvent', function () {
+      // Bind a custom event to <div>     
+      window.location = 'http://www.jquery.com';
+  });
+      $('div').click(function () {
+          // Click the <div> to invoke the custom event     
+          $(this).trigger('myCustomEvent');
+      })
+  })(jQuery); </script>
+</body>
+</html>

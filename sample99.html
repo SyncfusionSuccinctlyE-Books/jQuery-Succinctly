@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <!-- Elements being faded should have a width and height -->
+    <div style="height: 100px; width: 100px; background-color: red;"></div>
+    <button>Fade the rest of the way</button>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>  (function ($) {
+$('div').fadeTo('slow', 0.50);
+      $('button').click(function () {
+          // Fade from current opacity to zero,         
+          // then hide element via display:none         
+          $('div').fadeOut('slow');
+      });
+  })(jQuery); </script>
+</body>
+</html>

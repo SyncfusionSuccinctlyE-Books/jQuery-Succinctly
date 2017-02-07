@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <div style="height: 100px; width: 100px; background-color: red; position: absolute;
+        left: 20px;">
+        Try to animate me!
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script> (function ($) {
+     jQuery.fx.off = true;
+     $('div').slideUp();
+     jQuery.fx.off = false; // Turn animation back on     
+     $('div').slideDown(); // Will now animate  
+ })(jQuery); </script>
+</body>
+</html>

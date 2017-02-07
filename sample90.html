@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <a href="#" title="Hi">dialog, say Hi</a> <a href="#" title="Bye">dialog, say
+    Bye</a>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>   (function ($) {
+       $.fn.dialog = function (options) { var text = this.attr('title') || this.text(); alert(text); };
+   })(jQuery);
+        jQuery('a').click(function () { // Invoked by user event      
+            $(this).dialog(); return false;
+        });
+        $(window).load(function () {     // Create DOM element to invoke the plugin     
+            jQuery("<a></a>").attr('title', 'I say Hi when invoked!').dialog(); // Run immediately 
+        });  </script>
+</body>
+</html>

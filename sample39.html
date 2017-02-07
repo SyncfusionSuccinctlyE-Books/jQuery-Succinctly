@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <ul>
+        <li>jQuery is great.</li>
+        <li>Its lightweight.</li>
+        <li>Its free!</li>
+        <li>jQuery makes everything simple</li>
+    </ul>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>  (function($){  
+      // Wrap a <strong> element around any text within 
+      // a <li> that contains the pattern "jQuery" 
+      var pattern = /jQuery/i;
+      $('li').filter(function () { return pattern.test($(this).text()); }).wrap('<strong></strong>');
+  })(jQuery); </script>
+</body>
+</html>

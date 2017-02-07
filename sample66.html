@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <a>Say Hi</a>
+    <!-- click this element will alert "hi" -->
+    <a>Say Hi</a>
+    <!-- click this element will alert "hi" -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>  (function ($) {
+      // Bind a click handler to all <a> and immediately invoke their handlers 
+      $('a').click(function () { alert('hi') }).click();
+      // Page will alert twice. On page load, a click 
+      // is triggered for each <a> in the wrapper set.  
+  })(jQuery); </script>
+</body>
+</html>

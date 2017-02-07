@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <button>Add another Button</button>
+    <a href="#" class="clone">Add another Link</a>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>  (function ($) {
+$('button').click(function () {
+var $this = $(this);
+      $this.clone(true).insertAfter(this);
+      // Clone element and its events     
+      $this.text('button').unbind('click'); // Change text, remove event 
+  });
+      $('.clone').click(function () {
+          var $this = $(this);
+          $this.clone().insertAfter(this); // Clone element, but not its events     
+          $this.text('link').unbind('click'); // Change text, remove event
+      });
+  })(jQuery); </script>
+</body>
+</html>

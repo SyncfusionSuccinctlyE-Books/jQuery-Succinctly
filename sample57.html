@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <input checked="checked" type="checkbox" />
+    <input checked="checked" type="radio" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>  (function($){  
+      // Alerts "true" 
+      alert($('input:checkbox').is(':checked'));  
+      // Or, added to wrapper set if checked. Alerts "1" 
+      alert($('input:checkbox:checked').length);  
+      // Alerts "true" 
+      alert($('input:radio').is(':checked'));  
+      // Or, added to wrapper set if checked. Alerts "1" 
+      alert($('input:radio:checked').length);
+  })(jQuery); </script>
+</body>
+</html>

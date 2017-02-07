@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <select id="s" name="s">
+        <option value="option1">option one</option>
+        <option value="option2">option two</option>
+    </select>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>  (function ($) {
+      // Set the selected option in the select element to "option two" 
+      $('select').val('option2');
+      // Alerts "option2" 
+      alert($('select').val());
+  })(jQuery); </script>
+</body>
+</html>

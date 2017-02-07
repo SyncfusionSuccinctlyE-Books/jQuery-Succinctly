@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <input type="button" />
+    <input type="checkbox" />
+    <input type="hidden" />
+    <input type="image" />
+    <input type="password" />
+    <input type="radio" />
+    <input type="reset" />
+    <input type="submit" />
+    <input type="text" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>  (function ($) {
+      $('input:button').val('I am a button');
+      $('input:checkbox').val('I am a checkbox');
+      $('input:hidden').val('I am a hidden input');
+      $('input:image').val('I am a image');
+      $('input:password').val('I am a password');
+      $('input:radio').val('I am a radio');
+      $('input:reset').val('I am a reset');
+      $('input:submit').val('I am a submit');
+      $('input:text').val('I am a text');
+      // Alerts input's value attribute 
+      alert($('input:button').val());
+      alert($('input:checkbox').val());
+      alert($('input:hidden').val());
+      alert($('input:image').val());
+      alert($('input:password').val());
+      alert($('input:radio').val());
+      alert($('input:reset').val());
+      alert($('input:submit').val());
+      alert($('input:text').val());
+  })(jQuery); </script>
+</body>
+</html>

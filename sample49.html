@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <p>jQuery gives me <strong>more <span>power</span></strong> than any other web tool!
+    </p>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>  (function($){  $('p')     .find('*') // Select all nodes     
+      .andSelf() // Include <p>     
+      .contents() // Grab all child nodes, including text     
+      .filter(function() {return this.nodeType == Node.TEXT_NODE;}) // Remove non-text nodes     
+      .each(function (i, text) { alert(text.nodeValue) }); // Alert text contained in wrapper set  
+  })(jQuery); </script>
+</body>
+</html>

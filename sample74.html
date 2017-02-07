@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <div><span>stop</span></div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>  (function ($) {
+      $('div').click(function (event) {
+          // Attach click handler to <div>     
+          alert('You clicked the outer div');
+      });
+
+      $('span').click(function (event) {
+          // Attach click handler to <span>     
+          alert('You clicked a span inside of a div element');
+          // Stop click on <span> from propagating to <div>
+          // if you comment out the line below, 
+          //the click event attached to the div will also be invoked
+          event.stopPropagation();
+      });
+  })(jQuery); </script>
+</body>
+</html>

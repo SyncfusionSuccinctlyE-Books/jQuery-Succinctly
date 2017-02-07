@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>  alert(jQuery(document).jquery);
+        // Don't use $ here. It is not reliable.  
+        (function ($) {
+            // Can use $ without fear of conflicts      
+            alert($(document).jquery);
+        })(jQuery);  </script>
+</body>
+</html>

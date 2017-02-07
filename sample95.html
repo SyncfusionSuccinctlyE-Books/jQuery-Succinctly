@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <div style="height: 100px; width: 100px; background-color: red; color: white"></div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>  (function ($) {
+      function recursiveAnimate()
+      { $('div').slideToggle('slow', recursiveAnimate); };
+      recursiveAnimate(); $('div:animated').text('I am animating');
+  })(jQuery); </script>
+</body>
+</html>

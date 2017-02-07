@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <p>
+        I really hate using JavaScript.     I mean really hate it!     It is the best twister
+        ever!
+    </p>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>  (function ($) {
+var $p = $('p');
+      // Replace 'hate' with 'love' 
+      $p.text($p.text().replace(/hate/ig, 'love'));
+      // Remove 'twister' and replace it with nothing 
+      $p.text($p.text().replace(/twister/ig, ''));   // Keep in mind that text() returns a string, not the jQuery object. 
+      // That is how replace() string method is chained after using text() 
+  })(jQuery); </script>
+</body>
+</html>

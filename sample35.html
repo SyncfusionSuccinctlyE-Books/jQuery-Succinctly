@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <ul id="firstUL">
+        <li>text</li>
+        <li>
+            <ul id="secondUL">
+                <li>text</li>
+                <li>text</li>
+            </ul>
+        </li>
+        <li>text</li>
+    </ul>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>  (function ($) {
+      // Select only the direct <li> children. Alerts "3". 
+      alert($('ul:first').find('> li').length);  // or 
+      alert($('> li', 'ul:first').length);
+  }
+      )(jQuery); </script>
+</body>
+</html>

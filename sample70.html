@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <ul>
+        <li><a href="#">remove</a></li>
+        <li><a href="#">remove</a></li>
+        <li><a href="#">remove</a></li>
+        <li><a href="#">remove</a></li>
+        <li><a href="#">remove</a></li>
+        <li><a href="#">remove</a></li>
+    </ul>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>  (function ($) {
+      $('ul').click(function (event) { // Attach click handler to <ul> and pass event object     
+          // event.target is the <a>     
+          $(event.target).parent().remove(); // Remove <li> using parent()     
+          return false; // Cancel default browser behavior, stop propagation 
+      });
+  })(jQuery); </script>
+</body>
+</html>

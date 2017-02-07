@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <div id="div1">div1</div>
+    <div id="div2">div2</div>
+    <div id="div3">div3</div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>  (function($){     
+      // 3 alerts, one for each div     
+      $('div').each(function(){         
+          // "this" is each element in the wrapper set         
+          alert($(this).attr('id'));         
+          // Could also be written: alert(this.id);     
+        });
+      })(jQuery); 
+
+    </script>
+</body>
+</html>

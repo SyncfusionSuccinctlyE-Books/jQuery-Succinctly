@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style type="text/css">
+        div
+        {
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            color: white;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div>Click Me (hide animation)</div>
+    <div>Click Me (hide no animation)</div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>  (function ($) {
+      // Hide, with animation     
+      $('div:first').click(function () { $(this).hide(1000) });
+      // Hide, no animation     
+      $('div:last').click(function () { $(this).hide() });
+  })(jQuery); </script>
+</body>
+</html>

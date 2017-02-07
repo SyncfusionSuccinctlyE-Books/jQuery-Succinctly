@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <div style="position: absolute">absolute</div>
+    <span style="position: absolute">absolute</span>
+    <div>static</div>
+    <div style="position: absolute">absolute</div>
+    <div>static</div>
+    <span style="position: absolute">absolute</span>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script> (function ($) {
+     // Define custom filter by extending $.expr[':']     
+     $.expr[':'].positionAbsolute = function (element)
+     { return $(element).css('position') === 'absolute'; };
+     // How many elements in the page are absolutely positioned?     
+     alert($(':positionAbsolute').length); // Alerts "4"      
+     // How many div elements are absolutely positioned?     
+     alert($('div:positionAbsolute').length); // Alerts "2" 
+ })(jQuery); </script>
+</body>
+</html>

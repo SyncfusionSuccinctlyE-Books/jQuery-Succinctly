@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <div id="parentDiv" style="display: none;">
+        <div id="childDiv" style="display: block;"></div>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>  (function($){     
+            // Returns true because the parent div is hidden, so the     
+      // encapsulated div reports zero offsetWidth, offsetHeight     
+      alert($('#childDiv').is(':hidden'));
+  })(jQuery); </script>
+</body>
+</html>

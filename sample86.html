@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <div id="counter1"></div>
+    <div id="counter2"></div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>   (function ($) {
+$.fn.count = function () {
+       return this.each(function () {
+           // Return the jQuery object, or "this" after each()             
+           var $this = $(this);
+           $this.text('0');
+           var myInterval = window.setInterval(function () { var currentCount = parseFloat($this.text()); var newCount = currentCount + 1; $this.text(newCount + ''); }, 1000);
+       });
+   };
+   })(jQuery); jQuery('#counter1, #counter2').count().parent() // Chaining continues because jQuery object is returned     
+       .append('<p>Chaining still works!</p>');   </script>
+</body>
+</html>

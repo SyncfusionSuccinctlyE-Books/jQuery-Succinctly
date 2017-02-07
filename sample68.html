@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>  (function ($) {
+      $(window).bind('resize', function ()
+      { alert('I have no namespace'); });
+
+      $(window).bind('resize.unique', function () { alert('I have a unique namespace'); });
+
+      // Removes only the resize.unique function from event handler 
+      $(window).unbind('resize.unique')
+  })(jQuery); </script>
+</body>
+</html>

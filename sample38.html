@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <img />
+    <img />
+    <p>
+        <img />
+    </p>
+    <img />
+    <p>
+        <img />
+    </p>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>  (function ($) {
+      $('img').attr('src', 'http://static.jquery.com/files/rocker/images/logo_jquery_215x53.gif').filter(function () { return !$(this).parent('p').length == 1 }).wrap('<p></p>');
+  })(jQuery); </script>
+</body>
+</html>

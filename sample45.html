@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <div id="nav">
+        <div>nav text</div>
+        <div>nav text</div>
+        <div>nav text</div>
+        <div>nav text</div>
+        </div>
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+            <script>  (function ($) {
+      // Alert index of the clicked div amongst all div's in the wrapper set 
+      $('#nav div').click(function () {
+          alert($('#nav div').index(this));
+          // or, nice trick...     
+          alert($(this).prevAll().length);
+      });
+  })(jQuery); </script>
+</body>
+</html>
